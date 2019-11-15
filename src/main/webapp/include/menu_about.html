@@ -1,0 +1,19 @@
+<nav class="MenuList" id="Menu1">
+	<div class="MenuTitle">
+    	<span style="background-image:url(images/bg15.jpg);">关于方胜</span>
+    </div>
+   <ul class="MenuList1">
+      <li id="menu1"><a href="#">公司简介</a></li>
+      <li id="menu2"><a href="#">企业文化</a></li>
+      <li id="menu3"><a href="#">荣誉资质</a></li>
+      <li id="menu4"><a href="#">经营理念</a></li>
+      <li id="menu5"><a href="#">品牌优势</a></li>
+      <li id="menu6"><a href="#">联系方式</a></li>
+   </ul>
+</nav>
+<script type="text/javascript">
+	jQuery("#menu"+menuID).addClass("onmenu");
+	jQuery(".MenuList1").each(function(){
+		jQuery(this).find("li:last").css("border","none");
+	});
+</script>

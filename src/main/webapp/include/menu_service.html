@@ -1,0 +1,18 @@
+<nav class="MenuList" id="Menu1">
+	<div class="MenuTitle">
+    	<span style="background-image:url(images/bg15.jpg);">服务与支持</span>
+    </div>
+   <ul class="MenuList1">
+      <li id="menu1"><a href="#">定制服务政策</a></li>
+      <li id="menu2"><a href="#">客户服务案例</a></li>
+      <li id="menu3"><a href="#">售后服务内容</a></li>
+      <li id="menu4"><a href="#">客户投诉建议</a></li>
+      <li id="menu5"><a href="#">常见问题解答</a></li>
+   </ul>
+</nav>
+<script type="text/javascript">
+	jQuery("#menu"+menuID).addClass("onmenu");
+	jQuery(".MenuList1").each(function(){
+		jQuery(this).find("li:last").css("border","none");
+	});
+</script>

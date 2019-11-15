@@ -1,0 +1,30 @@
+<nav class="MenuList" id="Menu1">
+	<div class="MenuTitle">
+    	<span style="background-image:url(images/bg10.jpg);">品牌介绍</span>
+    </div>
+   <ul class="MenuList1">
+      <li id="menu1"><a href="#">Fancy</a></li>
+      <li id="menu2"><a href="#">百好汇</a></li>
+      <li id="menu3"><a href="#">MDP</a></li>
+   </ul>
+</nav>
+
+<nav class="MenuList" id="Menu1">
+	<div class="MenuTitle">
+    	<span style="background-image:url(images/bg10.jpg);">加盟合作</span>
+    </div>
+   <ul class="MenuList1">
+      <li id="menu1"><a href="#">代理资质政策</a></li>
+      <li id="menu2"><a href="#">销售政策</a></li>
+      <li id="menu3"><a href="#">价格政策</a></li>
+      <li id="menu4"><a href="#">业绩奖励政策</a></li>
+      <li id="menu5"><a href="#">首次订货政策</a></li>
+      <li id="menu6"><a href="#">加盟流程</a></li>
+   </ul>
+</nav>
+<script type="text/javascript">
+	jQuery("#menu"+menuID).addClass("onmenu");
+	jQuery(".MenuList1").each(function(){
+		jQuery(this).find("li:last").css("border","none");
+	});
+</script>

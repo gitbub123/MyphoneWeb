@@ -1,0 +1,86 @@
+<footer class="Bottomer">
+	<div class="Bottom">
+    	<div class="BottomCont">
+            <ul>
+                <li>
+                    <dl>
+                        <dd><a href="#">了解更多</a></dd>
+                        <dt><a href="#">手机市场</a></dt>
+                        <dt><a href="#">最新资讯</a></dt>
+                        <dt><a href="#">行业新闻</a></dt>
+                        <dt><a href="#">品牌介绍</a></dt>
+                        <dt><a href="#">服务中心</a></dt>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dd><a href="#">关于我们</a></dd>
+                        <dt><a href="#">公司简介</a></dt>
+                        <dt><a href="#">产品服务</a></dt>
+                        <dt><a href="#">客户服务</a></dt>
+                        <dt><a href="#">公司新闻</a></dt>
+                        <dt><a href="#">荣誉资质</a></dt>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dd><a href="#">活动中心</a></dd>
+                        <dt><a href="#">优惠活动</a></dt>
+                        <dt><a href="#">在线促销</a></dt>
+                        <dt><a href="#">特价商品</a></dt>
+                    </dl>
+                </li>
+                <li>
+                    <dl>
+                        <dd><a href="#">社区</a></dd>
+                        <dt><a href="#">新浪微博</a></dt>
+                        <dt><a href="#">微信</a></dt>
+                    </dl>
+                </li>
+                <div class="code">
+                	<img src="images/code.jpg" width="197" height="184" />
+                    <p>手机官网</p>
+                </div>
+                <div class="clear"></div>
+            </ul>
+        </div>
+    </div>
+    <script type="text/javascript">
+	jQuery(".BottomCont ul li:first").css("padding-left","0");
+	jQuery(".BottomCont ul li").each(function(i){
+		if(i==0){
+			jQuery(this).css("padding-left","0");
+		}
+		jQuery(this).find("dl dd").css("background","url(images/bg_"+i+".jpg) no-repeat center");
+	});
+	</script>
+   <nav class="BottomLinks"> <!--友情链接-->
+      友情链接 ：<a href="#" target="_blank">淘宝网</a><a href="#" target="_blank">京东</a><a href="#" target="_blank">百姓网</a><a href="#" target="_blank">腾讯网</a><a href="#" target="_blank">搜狐网</a>
+   </nav>
+   <div class="Copyright">
+   	<p>Copyright@ 2014 我的虚拟世界店铺  版权所有  Designed by <a href="#" target="_blank">我的虚拟世界店铺</a></p>
+    <p>《中华人民共和国电信与信息服务业务经营许可证》粤ICP备00000000号</p>
+    </div>
+</footer>
+
+<div class="QQTab" id="floatdiv">
+<a href="#" class="QQ"></a>
+<a href="javascript:void(0);" class="ToTop"></a>
+</div>
+<script type="text/javascript" src="scripts/qq.js"></script>
+<script type="text/javascript">
+$(function(){    
+        $(function () {  
+            //当点击跳转链接后，回到页面顶部位置  
+  
+            $(".ToTop").click(function(){  
+                $('body,html').animate({scrollTop:0},1000);  
+                return false;  
+            });  
+        });  
+    });
+</script>
+<script type="text/javascript">
+//整站无图处理
+jQuery.each(jQuery("img"), function (i, n) { jQuery(n).error(function () { n.src = 'uploadfiles/nopic.jpg'; }); n.src = n.src; });
+</script>

@@ -1,0 +1,15 @@
+<nav class="MenuList" id="Menu1">
+	<div class="MenuTitle">
+    	<span style="background-image:url(images/bg10.jpg);">包装展示</span>
+    </div>
+   <ul class="MenuList1">
+      <li id="menu1"><a href="#">保护帽</a></li>
+      <li id="menu2"><a href="#">保护套</a></li>
+   </ul>
+</nav>
+<script type="text/javascript">
+	jQuery("#menu"+menuID).addClass("onmenu");
+	jQuery(".MenuList1").each(function(){
+		jQuery(this).find("li:last").css("border","none");
+	});
+</script>

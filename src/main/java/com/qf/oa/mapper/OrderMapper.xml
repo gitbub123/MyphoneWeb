@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qf.oa.mapper.OrderMapper">
+  <resultMap id="BaseResultMap" type="com.qf.oa.entity.Order">
+    <!--@mbg.generated-->
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="sendtype" jdbcType="VARCHAR" property="sendtype" />
+    <result column="paytype" jdbcType="VARCHAR" property="paytype" />
+    <result column="paycount" jdbcType="INTEGER" property="paycount" />
+    <result column="orderdate" jdbcType="DATE" property="orderdate" />
+    <result column="userid" jdbcType="INTEGER" property="userid" />
+    <result column="username" jdbcType="VARCHAR" property="username" />
+    <result column="userphone" jdbcType="INTEGER" property="userphone" />
+    <result column="useradress" jdbcType="VARCHAR" property="useradress" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    <!--@mbg.generated-->
+    id, sendtype, paytype, paycount, orderdate, userid, username, userphone, useradress
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select 
+    <include refid="Base_Column_List" />
+    from t_order
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    <!--@mbg.generated-->
+    delete from t_order
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" keyColumn="id" keyProperty="id" parameterType="com.qf.oa.entity.Order" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into t_order (sendtype, paytype, paycount, 
+      orderdate, userid, username, 
+      userphone, useradress)
+    values (#{sendtype,jdbcType=VARCHAR}, #{paytype,jdbcType=VARCHAR}, #{paycount,jdbcType=INTEGER}, 
+      #{orderdate,jdbcType=DATE}, #{userid,jdbcType=INTEGER}, #{username,jdbcType=VARCHAR}, 
+      #{userphone,jdbcType=INTEGER}, #{useradress,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" keyColumn="id" keyProperty="id" parameterType="com.qf.oa.entity.Order" useGeneratedKeys="true">
+    <!--@mbg.generated-->
+    insert into t_order
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="sendtype != null">
+        sendtype,
+      </if>
+      <if test="paytype != null">
+        paytype,
+      </if>
+      <if test="paycount != null">
+        paycount,
+      </if>
+      <if test="orderdate != null">
+        orderdate,
+      </if>
+      <if test="userid != null">
+        userid,
+      </if>
+      <if test="username != null">
+        username,
+      </if>
+      <if test="userphone != null">
+        userphone,
+      </if>
+      <if test="useradress != null">
+        useradress,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="sendtype != null">
+        #{sendtype,jdbcType=VARCHAR},
+      </if>
+      <if test="paytype != null">
+        #{paytype,jdbcType=VARCHAR},
+      </if>
+      <if test="paycount != null">
+        #{paycount,jdbcType=INTEGER},
+      </if>
+      <if test="orderdate != null">
+        #{orderdate,jdbcType=DATE},
+      </if>
+      <if test="userid != null">
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="username != null">
+        #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="userphone != null">
+        #{userphone,jdbcType=INTEGER},
+      </if>
+      <if test="useradress != null">
+        #{useradress,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="com.qf.oa.entity.Order">
+    <!--@mbg.generated-->
+    update t_order
+    <set>
+      <if test="sendtype != null">
+        sendtype = #{sendtype,jdbcType=VARCHAR},
+      </if>
+      <if test="paytype != null">
+        paytype = #{paytype,jdbcType=VARCHAR},
+      </if>
+      <if test="paycount != null">
+        paycount = #{paycount,jdbcType=INTEGER},
+      </if>
+      <if test="orderdate != null">
+        orderdate = #{orderdate,jdbcType=DATE},
+      </if>
+      <if test="userid != null">
+        userid = #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="username != null">
+        username = #{username,jdbcType=VARCHAR},
+      </if>
+      <if test="userphone != null">
+        userphone = #{userphone,jdbcType=INTEGER},
+      </if>
+      <if test="useradress != null">
+        useradress = #{useradress,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="com.qf.oa.entity.Order">
+    <!--@mbg.generated-->
+    update t_order
+    set sendtype = #{sendtype,jdbcType=VARCHAR},
+      paytype = #{paytype,jdbcType=VARCHAR},
+      paycount = #{paycount,jdbcType=INTEGER},
+      orderdate = #{orderdate,jdbcType=DATE},
+      userid = #{userid,jdbcType=INTEGER},
+      username = #{username,jdbcType=VARCHAR},
+      userphone = #{userphone,jdbcType=INTEGER},
+      useradress = #{useradress,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <select id="selectByUserId" parameterType="integer" resultMap="BaseResultMap">
+    <!--@mbg.generated-->
+    select *
+    from t_order
+    where userid = #{userid,jdbcType=INTEGER}
+  </select>
+</mapper>
